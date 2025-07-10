@@ -6,7 +6,12 @@
 // Medusa configuration file (TypeScript)
 // This file configures your Medusa backend using the latest v2+ standards.
 // TypeScript provides type safety and better developer experience.
-
+console.log("medusa.config.ts");
+console.log("medusa.config.ts");
+console.log("medusa.config.ts");
+console.log("medusa.config.ts");
+console.log("medusa.config.ts");
+console.log("medusa.config.ts");
 import { loadEnv, Modules, defineConfig } from '@medusajs/utils';
 // Import environment variables/constants from your local constants file
 import {
