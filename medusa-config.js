@@ -1,3 +1,8 @@
+// >>> RUNNING CONFIG: medusa-config.js <<<
+// >>> RUNNING CONFIG: medusa-config.js <<<
+// >>> RUNNING CONFIG: medusa-config.js <<<
+// >>> RUNNING CONFIG: medusa-config.js <<<
+
 import { loadEnv, Modules, defineConfig } from '@medusajs/utils';
 import {
   ADMIN_CORS,

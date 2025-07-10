@@ -1,4 +1,8 @@
 // >>> RUNNING CONFIG: medusa.config.ts <<<
+// >>> RUNNING CONFIG: medusa.config.ts <<<
+// >>> RUNNING CONFIG: medusa.config.ts <<<
+// >>> RUNNING CONFIG: medusa.config.ts <<<
+// >>> RUNNING CONFIG: medusa.config.ts <<<
 // Medusa configuration file (TypeScript)
 // This file configures your Medusa backend using the latest v2+ standards.
 // TypeScript provides type safety and better developer experience.
