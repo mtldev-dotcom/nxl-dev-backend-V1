@@ -1,16 +1,5 @@
-// >>> RUNNING CONFIG: medusa-config.js <<<
-// >>> RUNNING CONFIG: medusa-config.js <<<
-// >>> RUNNING CONFIG: medusa-config.js <<<
-// >>> RUNNING CONFIG: medusa-config.js <<<
-console.log("medusa-config.js");
-console.log("medusa-config.js");
-console.log("medusa-config.js");
-console.log("medusa-config.js");
-console.log("medusa-config.js");
-console.log("medusa-config.js");
-console.log("medusa-config.js");
-console.log("medusa-config.js");
 import { loadEnv, Modules, defineConfig } from '@medusajs/utils';
+import { TolgeeModuleConfig } from 'medusa-plugin-tolgee'
 import {
   ADMIN_CORS,
   AUTH_CORS,
@@ -148,6 +137,24 @@ const medusaConfig = {
     }] : [])
   ],
   plugins: [
+    // --- Tolgee Translation Plugin ---
+    // This plugin integrates Tolgee for translation management in Medusa.
+    // Make sure to set TOLGEE_API_URL and TOLGEE_API_KEY in your environment.
+    // Replace 'your_tolgee_project_id' with your actual Tolgee project ID.
+    {
+      resolve: 'medusa-plugin-tolgee',
+      options: {
+        baseURL: process.env.TOLGEE_API_URL, // e.g., 'https://app.tolgee.io' for Tolgee Cloud
+        apiKey: process.env.TOLGEE_API_KEY,  // Your Tolgee API key (keep this secret!)
+        projectId: '2',  // <-- Replace with your actual Tolgee project ID
+        // ttl: 1000 * 60 * 5, // Optional: cache expiration (default 5min)
+        // rateLimit: { maxRequests: 15, perMilliseconds: 3000 }, // Optional: tune for your Tolgee plan
+        // batchingDelayMilliseconds: 50, // Optional: tune for SSG or large catalogs
+        // keys: { product: ["title", "subtitle", "description"] }, // Optional: customize translatable fields
+        // tags: { product: ["custom_tag"] }, // Optional: add custom tags
+      },
+    },
+    // --- End Tolgee Plugin ---
     ...(MEILISEARCH_HOST && MEILISEARCH_ADMIN_KEY ? [{
       resolve: '@rokmohar/medusa-plugin-meilisearch',
       options: {
